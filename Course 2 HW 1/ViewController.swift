@@ -23,9 +23,6 @@ class ViewController: UIViewController {
     }
 
     @IBAction func startButton(_ sender: Any) {
-//        print("\(redLight.alpha) red")
-//        print("\(yellowLight.alpha) yellow")
-//        print("\(greenLight.alpha) green")
 
         if yellowLight.alpha == redLight.alpha && greenLight.alpha == redLight.alpha {
             startButton.setTitle("Next", for: .normal)
@@ -36,12 +33,9 @@ class ViewController: UIViewController {
         } else if yellowLight.alpha == 1 {
             greenLight.alpha = 1
             yellowLight.alpha = 0.4
-            print("\(greenLight.alpha) g1")
         } else if greenLight.alpha == 1 {
-            print("\(greenLight.alpha) g2")
             redLight.alpha = 1
             greenLight.alpha = 0.4
-            print("\(greenLight.alpha) g3")
         }
     }
     
