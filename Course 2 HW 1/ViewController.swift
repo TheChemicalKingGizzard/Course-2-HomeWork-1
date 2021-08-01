@@ -9,11 +9,41 @@ import UIKit
 
 class ViewController: UIViewController {
 
+
+    @IBOutlet var greenLight: UIView!
+    @IBOutlet var yellowLight: UIView!
+    @IBOutlet var redLight: UIView!
+    @IBOutlet var startButton: UIButton!
+    
     override func viewDidLoad() {
+        greenLight.alpha = 0.4
+        yellowLight.alpha = 0.4
+        redLight.alpha = 0.4
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
+    @IBAction func startButton(_ sender: Any) {
+//        print("\(redLight.alpha) red")
+//        print("\(yellowLight.alpha) yellow")
+//        print("\(greenLight.alpha) green")
 
+        if yellowLight.alpha == redLight.alpha && greenLight.alpha == redLight.alpha {
+            startButton.setTitle("Next", for: .normal)
+            redLight.alpha = 1
+        } else if redLight.alpha == 1 {
+            yellowLight.alpha = 1
+            redLight.alpha = 0.4
+        } else if yellowLight.alpha == 1 {
+            greenLight.alpha = 1
+            yellowLight.alpha = 0.4
+            print("\(greenLight.alpha) g1")
+        } else if greenLight.alpha == 1 {
+            print("\(greenLight.alpha) g2")
+            redLight.alpha = 1
+            greenLight.alpha = 0.4
+            print("\(greenLight.alpha) g3")
+        }
+    }
+    
 }
 

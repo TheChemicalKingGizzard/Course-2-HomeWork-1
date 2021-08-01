@@ -1,24 +1,129 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Course_2_HW_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3et-SP-M1n">
+                                <rect key="frame" x="132" y="114" width="150" height="150"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="5Bc-vf-ple"/>
+                                    <constraint firstAttribute="width" constant="150" id="7rT-6F-qWE"/>
+                                    <constraint firstAttribute="width" secondItem="3et-SP-M1n" secondAttribute="height" multiplier="1:1" id="dZO-hk-QsV"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="60"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qEE-KT-jdZ">
+                                <rect key="frame" x="132" y="304" width="150" height="150"/>
+                                <color key="backgroundColor" red="0.94263356924057007" green="0.98480862379074097" blue="0.015724893659353256" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="gEQ-Ig-mK0"/>
+                                    <constraint firstAttribute="width" constant="150" id="xDA-4P-ytO"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="60"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6SX-kJ-mei">
+                                <rect key="frame" x="132" y="494" width="150" height="150"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="eTR-ig-Zjp"/>
+                                    <constraint firstAttribute="width" constant="150" id="rkh-vd-T9q"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="60"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CL2-es-7zK">
+                                <rect key="frame" x="82" y="705" width="250" height="59"/>
+                                <color key="backgroundColor" red="0.08124610036611557" green="0.029428973793983459" blue="0.021082531660795212" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="SuW-uK-ptI"/>
+                                    <constraint firstAttribute="height" constant="59" id="ysi-RN-GVN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="41"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" systemColor="systemOrangeColor"/>
+                                </state>
+                                <state key="highlighted" title="Next"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="startButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tgO-F3-nue"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trafficlight_trafic_13246" translatesAutoresizingMaskIntoConstraints="NO" id="FyZ-gG-gLV">
+                                <rect key="frame" x="37" y="44" width="346" height="641"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="641" id="JWj-PH-deu"/>
+                                    <constraint firstAttribute="width" constant="346" id="bTw-1I-oBG"/>
+                                </constraints>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.077948965132236481" green="0.51119726896286011" blue="0.79396790266036987" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="FyZ-gG-gLV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="37" id="1DD-zD-KTh"/>
+                            <constraint firstItem="3et-SP-M1n" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CRn-6j-PAg"/>
+                            <constraint firstItem="3et-SP-M1n" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="Orj-22-WAF"/>
+                            <constraint firstItem="CL2-es-7zK" firstAttribute="top" secondItem="FyZ-gG-gLV" secondAttribute="bottom" constant="20" id="Uma-OY-Hqa"/>
+                            <constraint firstItem="qEE-KT-jdZ" firstAttribute="top" secondItem="3et-SP-M1n" secondAttribute="bottom" constant="40" id="VlB-rG-IFZ"/>
+                            <constraint firstItem="3et-SP-M1n" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="132" id="X9F-Af-yE3"/>
+                            <constraint firstItem="6SX-kJ-mei" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="132" id="by3-fh-clW"/>
+                            <constraint firstItem="qEE-KT-jdZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="132" id="ty9-f2-OjZ"/>
+                            <constraint firstItem="FyZ-gG-gLV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="vUd-ND-Bsh"/>
+                            <constraint firstItem="6SX-kJ-mei" firstAttribute="top" secondItem="qEE-KT-jdZ" secondAttribute="bottom" constant="40" id="w41-wR-QKr"/>
+                            <constraint firstItem="CL2-es-7zK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="82" id="ygm-0k-500"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greenLight" destination="6SX-kJ-mei" id="WmY-Ps-btO"/>
+                        <outlet property="redLight" destination="3et-SP-M1n" id="ZQa-0D-VOP"/>
+                        <outlet property="startButton" destination="CL2-es-7zK" id="7vX-AY-1u3"/>
+                        <outlet property="yellowLight" destination="qEE-KT-jdZ" id="tZK-UT-Qob"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="75.669642857142847"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="trafficlight_trafic_13246" width="170.66667175292969" height="170.66667175292969"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
